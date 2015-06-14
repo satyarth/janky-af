@@ -38,7 +38,7 @@ class StdOutListener(StreamListener):
                 pass
             else:
                 try:
-                    print message
+                    # print message
                     api.update_status(status=message, in_reply_to_status_id=status_id)
                     return False
                 except tweepyerror.TweepError:
