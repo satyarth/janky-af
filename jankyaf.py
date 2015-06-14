@@ -1,4 +1,4 @@
-from random import choice
+import random
 import re
 
 greetings = ['yo', 'hey', 'wassup', 'ayy', '\'sup', 'ayo', 'a-yo', 'holla',\
@@ -14,7 +14,11 @@ def janky_af(text, screen_name):
     if any(string in text for string in banned_strings):
         return ""
     text = re.findall(r"\w+|[^\w\s]", text, re.UNICODE)
-    message = choice(greetings) + " @" + screen_name + ", your "
+    if random.random() < 0.1:
+        message += random.choice(greetings)
+    else:
+        message += "."
+    message += " @" + screen_name + ", your "
     for i in range(len(text) - 1):
         if text[i].lower() == "my":
             if text[i+1] in [' ', '']:
@@ -27,6 +31,7 @@ def janky_af(text, screen_name):
             break
         else:
             return ""
-    message += " janky as fuck, "
-    message += choice(signoffs)
+    message += " janky as fuck"
+    if random.random() < 0.1:
+        message += ", " + random.choice(signoffs)
     return message
