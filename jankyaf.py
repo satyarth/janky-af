@@ -7,7 +7,7 @@ greetings = ['yo', 'hey', 'wassup', 'ayy', '\'sup', 'ayo', 'a-yo', 'holla',\
 signoffs = ['keep easy', '\'ear me now', 'ya dig', 'word up', '#truth', 'peace out', \
     'hang loose', 'check it', 'booyakasha', 'respect', 'can ya dig it', 'ya feel me', \
     'fo real', 'keep it real', 'big up yoself', 'easy now', 'safe', 'trudat']
-banned_strings = ['fitbit', 'mom', 'dad', 'mother', 'father', 'kid', 'son', 'daughter']
+banned_strings = ['fitbit', 'mom', 'dad', 'mother', 'father', 'kid', 'son', 'daughter', 'mum', 'grandma', 'grandma', 'murder', 'die', 'dead', 'sicl']
 
 def janky_af(text, screen_name):
     message = ""
