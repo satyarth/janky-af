@@ -1,5 +1,8 @@
 import random
 import re
+import inflect
+
+p = inflect.engine()
 
 greetings = ['yo', 'hey', 'wassup', 'ayy', '\'sup', 'ayo', 'a-yo', 'holla',\
     'how\'s it hanging', 'what\'s crack-a-lackin\'', 'Greetings and salutations',\
@@ -24,7 +27,7 @@ def janky_af(text, screen_name):
             if text[i+1] in [' ', '']:
                 return ""
             message += text[i+1].lower()
-            if text[i+1].endswith('s'):
+            if p.plural(text[i+1]) == text[i+1]:
                 message += " are"
             else:
                 message += " is"
