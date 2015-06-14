@@ -14,7 +14,7 @@ def janky_af(text, screen_name):
     if any(string in text for string in banned_strings):
         return ""
     text = re.findall(r"\w+|[^\w\s]", text, re.UNICODE)
-    if random.random() < 0.1:
+    if random.random() < 0.9:
         message += random.choice(greetings)
     else:
         message += "."
@@ -32,6 +32,6 @@ def janky_af(text, screen_name):
         else:
             return ""
     message += " janky as fuck"
-    if random.random() < 0.1:
+    if random.random() < 0.9:
         message += ", " + random.choice(signoffs)
     return message
