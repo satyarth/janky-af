@@ -59,4 +59,4 @@ if __name__ == '__main__':
     stream = Stream(auth, l)
     while True:
         stream.filter(track=['my'])
-        sleep(randint(0, 100))
+        sleep(randint(0, 1000))
